@@ -57,3 +57,20 @@ func (l *List) Show() {
 	}
 	fmt.Printf("nil\n")
 }
+
+// function reverseList() that reverses the list
+// 1-->2-->3 becomes 3-->2-->1
+
+func Reverse(l *List){
+	var prev *Node
+	var next *Node
+	current := l.head
+	
+	for current.next != nil {
+		next = current.next
+		current.next =prev
+		prev = current
+		current = next
+	}
+	l.head = prev
+}
