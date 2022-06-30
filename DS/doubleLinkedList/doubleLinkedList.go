@@ -57,7 +57,7 @@ func SizeOf(l *List) int {
 	return l.size
 }
 
-func showReverse(l *List) {
+func ShowReverse(l *List) {
 	if l.head == nil {
 		fmt.Println("Empty list")
 	} else {
